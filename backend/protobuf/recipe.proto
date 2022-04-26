@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package userpb;
+
+message RecipeRequest {
+    string title = 1;
+}
+
+message RecipeResponse {
+    string title = 1;
+    string description = 2;
+}
+
+service Recipe {
+    rpc GetRecipe(RecipeRequest) returns (RecipeResponse) {} ;
+}
